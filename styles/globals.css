@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Ritüel karanlığı paleti (Anayasa / Faz 3-4) */
+  --bg-night: #060608;
+  --gold: #c9a961;
+  --ember: #d6743c;
+  --text-primary: #e8e4db;
+  --text-secondary: #9d9a92;
+  --text-tertiary: #67645d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-night);
+  color: var(--text-primary);
+  font-family: var(--font-display), Georgia, serif;
+  overflow-x: hidden;
+}
+
+.ui { font-family: var(--font-body), Georgia, serif; }
+
+::selection { background: var(--gold); color: var(--bg-night); }
+
+button { font-family: inherit; }
+
+.runtime-shell { min-height: 100vh; position: relative; }
+
+/* çatlak başlık driftı (Köroğlu) */
+@keyframes drift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+/* mobil: Dünya Ağacı geri çekilir, alt nav görünür */
+@media (max-width: 760px) {
+  .worldtree-layer { opacity: 0.22 !important; right: -30vw !important; }
+}
+
+/* erişilebilirlik: hareket azaltma */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
