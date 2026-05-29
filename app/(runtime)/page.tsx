@@ -1,4 +1,4 @@
-import { FrequencySync } from "@/components/runtime/FrequencySync";
+import { HomePage } from "@/components/runtime/HomePage";
 export default function Home() {
-  return <FrequencySync mode="KOZMOS" />;
+  return <HomePage />;
 }
