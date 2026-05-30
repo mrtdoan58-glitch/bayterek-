@@ -10,6 +10,7 @@ import React from "react";
 import { FrequencyProvider } from "@/components/runtime/FrequencyProvider";
 import { WorldTree } from "@/components/worldtree/WorldTree";
 import { AtmosphereLayer, GrainLayer, RecoveryFlash } from "@/components/ritual/AtmosphereLayer";
+import { AtmosferEngine } from "@/components/ritual/AtmosphereEngine";
 import { CosmicNav, MobileNav } from "@/components/navigation/CosmicNav";
 import { MythMemory, MemoryTrigger } from "@/components/memory/MythMemory";
 import { ProgressLine } from "@/components/runtime/ProgressLine";
@@ -21,6 +22,7 @@ export default function RuntimeLayout({ children }: { children: React.ReactNode 
         {/* daimî katmanlar — route değişiminde unmount OLMAZ */}
         <ProgressLine />
         <AtmosphereLayer />
+        <AtmosferEngine />
         <GrainLayer />
         <WorldTree />
         <CosmicNav />
